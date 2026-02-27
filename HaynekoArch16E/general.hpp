@@ -3,14 +3,18 @@
 #include <iostream>
 #include <string>
 
+#define VM_VERSION 1
+
 #define print(msg) std::cout << "[General] " << (msg) << std::endl;
 #define warn(msg)  std::cout << "[Warning] " << (msg) << std::endl;
 #define error(msg) std::cerr << "[Error] " << (msg) << std::endl;
 
 // macro
 
-#define VM_CPU_DISABLE_PROTECTION_MODE
-#define VM_MEM_CREATE_NO_WARNING
+#define VMCPU_DISABLE_PROTECTION_MODE
+#define VMMEM_CREATE_NO_WARNING
+
+#define ALPHA
 
 // end macro
 
@@ -65,6 +69,7 @@ typedef dword                   flag;
 
 // ### FUNCTIONS ###
 // truncation
+
 inline dword truncateQ2D( qword val ) {
 	return val & DWORD_RANGE;
 }
@@ -90,6 +95,7 @@ inline byte truncateWord( word val ) {
 }
 
 // sign/zero extention
+
 inline qword signExtendD2Q( dword val ) {
 	if ( val & DWORD_SIGN )
 		return val | 0xFFFFFFFF80000000;
@@ -103,4 +109,22 @@ inline dword signExtendW2D( word val ) {
 inline dword signExtendB2D( byte val ) {
 	if ( val & BYTE_SIGN )
 		return val | 0xFFFFFF80;
+}
+
+// bit set/clear
+
+inline bool isBitSet( dword res, byte bit_pos ) {
+	return res & ( 1 << bit_pos );
+}
+
+inline void setBit( dword &res, byte bit_pos ) {
+	res |= ( 1 << bit_pos );
+}
+
+inline void clearBit( dword &res, byte bit_pos ) {
+	res &= ~( 1 << bit_pos );
+}
+
+inline void toggleBit( dword &res, byte bit_pos ) {
+	res ^= ( 1 << bit_pos );
 }

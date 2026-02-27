@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="HaynekoArch16E/HaynekoArch16E.vcxproj" />
+  <Project Path="HaynekoArch16E/HaynekoArch16E.vcxproj" Id="8cbcf9a1-2221-4b45-a294-76da77691e0f" />
 </Solution>
