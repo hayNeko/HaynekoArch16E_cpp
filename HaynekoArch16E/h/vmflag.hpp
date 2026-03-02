@@ -14,7 +14,9 @@ public:
 		XTE, BME, CIE,
 		U5, U6, U7, U8, U9,
 		VIE,
-		U10, U11, U12, U13, U14, U15, U16, U17
+		U10, U11, U12, U13, U14, U15,
+		PROT,
+		U16
 	};
 
 	static constexpr dword Z_MASK   = 1 << 0;
@@ -56,8 +58,10 @@ public:
 	static constexpr dword U13_MASK = 1 << 27;
 	static constexpr dword U14_MASK = 1 << 28;
 	static constexpr dword U15_MASK = 1 << 29;
-	static constexpr dword U16_MASK = 1 << 30;
-	static constexpr dword U17_MASK = 1 << 31;
+
+	static constexpr dword PROT_MASK = 1 << 30;
+
+	static constexpr dword U16_MASK = 1 << 31;
 
 private:
 	dword flag;

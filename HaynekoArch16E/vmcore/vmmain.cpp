@@ -23,9 +23,13 @@ int main( int argc, char *argv[] ) {
 	std::cout << "This is Alpha version." << std::endl;
 	#endif
 
-	if (argv[1] > 0) // enable protected mode
+	if ( argv[1] > 0 ) {// enable protected mode
+		#undef VMCPU_DISABLE_PROTECTION_MODE;
+		goto vmSetProtectedModeAfterInit;
+	}
 
-
+vmSetProtectedModeAfterInit:
+	// init vmcore with default values
 
 	return VM_PROCESS_EXIT_CODE_SUCCESS;
 }
