@@ -7,19 +7,19 @@ void Flag::set( Flag::TYPE flag ) {
 	#ifndef VMCPU_DISABLE_PROTECTION_MODE
 	if (flag >= 16 ) throw std::invalid_argument( "Invalid flag" );
 	#endif
-	this->flag |= ( 1 << flag );
+	setBit( this->flag, flag );
 }
 
 void Flag::clear( Flag::TYPE flag ) {
 	#ifndef VMCPU_DISABLE_PROTECTION_MODE
 	if (flag >= 16 ) throw std::invalid_argument( "Invalid flag" );
 	#endif
-	this->flag &= ~( 1 << flag );
+	clearBit( this->flag, flag );
 }
 
 bool Flag::get( Flag::TYPE flag ) const {
 	#ifndef VMCPU_DISABLE_PROTECTION_MODE
 	if (flag >= 16 ) throw std::invalid_argument( "Invalid flag" );
 	#endif
-	return this->flag & ( 1 << flag );
+	return isBitSet( this->flag, flag );
 }

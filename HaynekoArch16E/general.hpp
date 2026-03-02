@@ -14,6 +14,8 @@
 #define VMCPU_DISABLE_PROTECTION_MODE
 #define VMMEM_CREATE_NO_WARNING
 
+#define VMENDIAN_LITTLE
+
 #define ALPHA
 
 // end macro
