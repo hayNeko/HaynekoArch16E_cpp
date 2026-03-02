@@ -1,23 +1,31 @@
 #include <iostream>
 
-#include "general.hpp"
+#include "h/general.hpp"
 
-//#include "vmcore.hpp"
-//#include "vmcpu.hpp"
-#include "vmflag.hpp"
-//#include "vminst.hpp"
-#include "vminstphsr.hpp"
-#include "vmmem.hpp"
-//#include "vmport.hpp"
-#include "vmreg.hpp"
+//#include "h/vmcore.hpp"
+//#include "h/vmcpu.hpp"
+#include "h/vmflag.hpp"
+//#include "h/vminst.hpp"
+#include "h/vminstphsr.hpp"
+#include "h/vmmem.hpp"
+//#include "h/vmport.hpp"
+#include "h/vmreg.hpp"
 
 //#undef ALPHA
 
-int main() {
+/* arg0: is_protected mode (0: default disable, 1: enable)
+
+
+
+*/
+int main( int argc, char *argv[] ) {
 	#ifdef ALPHA
 	std::cout << "This is Alpha version." << std::endl;
 	#endif
 
+	if (argv[1] > 0) // enable protected mode
 
-	return 0;
+
+
+	return VM_PROCESS_EXIT_CODE_SUCCESS;
 }

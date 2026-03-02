@@ -1,7 +1,7 @@
 #include <stdexcept>
 
-#include "general.hpp"
-#include "vmreg.hpp"
+#include "h/general.hpp"
+#include "h/vmreg.hpp"
 
 IP::IP() {
 	this->ip = 0xFFFFFFFA; // JMP .program_entry  3E XX XX XX XX

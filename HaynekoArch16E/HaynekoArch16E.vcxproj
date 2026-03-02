@@ -30,11 +30,11 @@
     <ClCompile Include="vmcore\vmreg.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headers\general.hpp" />
-    <ClInclude Include="headers\vmflag.hpp" />
-    <ClInclude Include="headers\vminstphsr.hpp" />
-    <ClInclude Include="headers\vmmem.hpp" />
-    <ClInclude Include="headers\vmreg.hpp" />
+    <ClInclude Include="h\general.hpp" />
+    <ClInclude Include="h\vmflag.hpp" />
+    <ClInclude Include="h\vminstphsr.hpp" />
+    <ClInclude Include="h\vmmem.hpp" />
+    <ClInclude Include="h\vmreg.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
@@ -42,6 +42,7 @@
     <ProjectGuid>{8cbcf9a1-2221-4b45-a294-76da77691e0f}</ProjectGuid>
     <RootNamespace>HaynekoArch16E</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>HaynekoArch32S</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -89,7 +90,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ExternalIncludePath>D:\lib\cpp;$(ExternalIncludePath)</ExternalIncludePath>
+    <ExternalIncludePath>D:\github_io\HaynekoArch16E\HaynekoArch16E;D:\lib\cpp;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

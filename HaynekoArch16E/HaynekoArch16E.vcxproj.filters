@@ -44,19 +44,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headers\vmreg.hpp">
+    <ClInclude Include="h\vmreg.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="headers\general.hpp">
+    <ClInclude Include="h\general.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="headers\vmmem.hpp">
+    <ClInclude Include="h\vmmem.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="headers\vminstphsr.hpp">
+    <ClInclude Include="h\vminstphsr.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="headers\vmflag.hpp">
+    <ClInclude Include="h\vmflag.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
