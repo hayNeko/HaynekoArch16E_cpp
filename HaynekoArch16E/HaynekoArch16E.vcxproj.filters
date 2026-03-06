@@ -15,49 +15,64 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="vmcore\vmreg.cpp">
+    <ClCompile Include="vmcore\cpu\vmreg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="vmcore\vmmem.cpp">
+    <ClCompile Include="vmcore\cpu\vmmem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="vmcore\vmmain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="vmcore\vmport.cpp">
+    <ClCompile Include="vmcore\cpu\vmport.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="vmcore\vminst.cpp">
+    <ClCompile Include="vmcore\cpu\vminst.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="vmcore\vmcore.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="vmcore\vmcpu.cpp">
+    <ClCompile Include="vmcore\cpu\vmcpu.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="vmcore\vminstphsr.cpp">
+    <ClCompile Include="vmcore\cpu\vminstphsr.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="vmcore\vmflag.cpp">
+    <ClCompile Include="vmcore\cpu\vmflag.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vmcore\vmboot\vminit.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="h\vmreg.hpp">
+    <ClInclude Include="h\cpu\vmreg.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="h\general.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="h\vmmem.hpp">
+    <ClInclude Include="h\cpu\vmmem.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="h\vminstphsr.hpp">
+    <ClInclude Include="h\cpu\vminstphsr.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="h\vmflag.hpp">
+    <ClInclude Include="h\cpu\vmflag.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="h\vmboot\vminit.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="h\cpu\vminst.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="h\cpu\vminstprefix.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source\hayneko_arch32S-v1.json" />
   </ItemGroup>
 </Project>

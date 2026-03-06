@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __H_GENERAL__
+#define __H_GENERAL__
 
 #include <iostream>
 #include <string>
@@ -40,6 +41,10 @@ typedef unsigned char           byte;
 typedef unsigned short          word;
 typedef unsigned int            dword;
 typedef unsigned long long      qword;
+typedef signed char            sbyte;
+typedef signed short           sword;
+typedef signed int             sdword; // or just int
+typedef signed long long       sqword;
 
 constexpr byte  BYTE_RANGE    = 0xFF;
 constexpr word  WORD_RANGE    = 0xFFFF;
@@ -71,12 +76,15 @@ typedef qword                   regq;
 
 typedef dword                   ctrlreg;
 
+typedef word                    addrw;
 typedef dword                   addr;
 
-typedef byte                    dispb;
-typedef word                    dispw;
-typedef dword                   dispd;
-typedef qword                   dispq;
+typedef byte                    port;
+
+typedef sbyte                   dispb;
+typedef sword                   dispw;
+typedef sdword                  dispd;
+typedef sqword                  dispq;
 
 typedef byte                    immb;
 typedef word                    immw;
@@ -155,7 +163,7 @@ inline void toggleBit( dword &res, byte bit_pos ) {
 inline dword random( dword seed ) {
 	dword ans = ( seed ^ 0x39DF307E + 1 ) >> ( seed & 0x07 + 1 );
 	for ( byte i = 0; i <= ( (byte)( seed ^ 0x39 ) ); ++i ) {
-		ans ^= ( ~( i << 2 ) + 0x16 ) * ( i << 2 + 1 ) - ( ( i << 8 ) | ( seed % 16 ) );
+		ans ^= ( ~( i << 2 ) + 0x16 ) * ( (i << 2) + 1 ) - ( ( i << 8 ) | ( seed % 16 ) );
 		ans += (dword)( ~( seed & 0x3900005B - i * 8 ) >> 3 );
 	}
 	return ans;
@@ -168,3 +176,6 @@ inline dword randoms( dword seed, byte times ) {
 	}
 	return ans;
 }
+
+
+#endif // __H_GENERAL__

@@ -1,7 +1,7 @@
 #include <stdexcept>
 
-#include "h/vmmem.hpp"
 #include "h/general.hpp"
+#include "cpu/vmmem.hpp"
 
 VMMem::VMMem(dword mem_size) : mem_size(mem_size)  {
 	#ifndef VMMEM_CREATE_NO_WARNING

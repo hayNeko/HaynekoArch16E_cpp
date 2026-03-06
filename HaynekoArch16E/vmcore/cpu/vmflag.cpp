@@ -1,7 +1,7 @@
 #include <stdexcept>
 
-#include "h/vmflag.hpp"
 #include "h/general.hpp"
+#include "cpu/vmflag.hpp"
 
 void Flag::set( Flag::TYPE flag ) {
 	#ifndef VMCPU_DISABLE_PROTECTION_MODE
